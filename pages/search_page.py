@@ -1,5 +1,3 @@
-import time
-
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
@@ -29,10 +27,6 @@ class SearchPage(BasePage):
         """ Search For Sneakers """
         self.do_click(self.SEARCH)
         self.do_send_key(self.SEARCH, search_word)
-
-    def contain_in_list(self):
-        """ Check Word Contains In List """
-        return self.is_visible(self.SEARCH_DROPLIST)
 
     def get_list_search_suggestion(self, text):
         """ Get list of suggestion """
